@@ -1,11 +1,17 @@
 import {Form, Link} from "@remix-run/react";
+import drizzle from "../../database/drizzle";
+
+export async function action() {
+    console.log(drizzle);
+    return null;
+}
 
 export default function Signup() {
     return (
         <div className="bg-gray-100 flex items-center justify-center h-screen">
             <div className="bg-white p-8 rounded-lg shadow-lg w-96">
                 <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
-                <Form>
+                <Form method="post">
                     <div className="mb-4">
                         <label htmlFor="fullName" className="block text-gray-700 font-semibold">Full Name</label>
                         <input

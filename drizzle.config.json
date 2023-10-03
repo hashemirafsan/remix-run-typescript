@@ -1,0 +1,4 @@
+{
+    "schema": "./database/schemas/*",
+    "out": "./drizzle"
+}
